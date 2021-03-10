@@ -11,7 +11,7 @@ all:${BINS}
 %.out:%.cpp
 	$(CXX) $< -o $@ ${DEBUG} -I${HEADER_INCLUDE_DIR} ${LIB_INCLUDE_DIRS} ${LIB_LIBDIR} ${SDL_DEPS} -std=c++17
 
-09_shader.out:09_shader.cpp shader/vert.spv shader/frag.spv
+vertex_input.out:vertex_input.cpp shader/vert.spv shader/frag.spv
 
 shader/vert.spv:shader/shader.vert
 	$(GLSLC) $^ -o $@
